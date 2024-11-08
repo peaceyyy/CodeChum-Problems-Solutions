@@ -12,7 +12,7 @@ and then prints out the first 10 terms of the geometric progression using a for 
 
 int main(){
     
-    int r, d, finalProduct;
+    int r, d;
     printf("Enter starting number: ");
     scanf("%d",&r);
     printf("Enter common ratio: ");
