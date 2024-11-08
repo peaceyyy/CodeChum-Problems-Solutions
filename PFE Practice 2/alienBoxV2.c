@@ -24,37 +24,31 @@ MUST USE NESTED WHILE LOOPS
 
 */
 
-
 #include <stdio.h>
 
 int main(){
     
-    int num, i;
+    int n, i = 1;
     
     printf("Enter a number: ");
-    scanf("%d", &num);
+    scanf("%d", &n);
     
-    if (num < 2) printf("Invalid input!");
+    if (n < 2) printf("Invalid input!");
     
     else {
         
-    i = 1; 
-    
-    while (i <= num) {
-        
-        int j = 0;
-        
-        while (j < num - 1){
+         while (i <= n){
             
-            printf("%d ", i);
-            j++;
-        }
+            int j = 0;
+            
+            while (j < n - 1){
+                
+                printf("%d ", i);
+                j++;
+            }
         
-    printf("%d", i + 1);
-    printf("\n");
-        
-    i++;
-    
+            i++;
+            printf("%d\n", i);
         }
     }
 }
