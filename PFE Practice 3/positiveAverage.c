@@ -14,50 +14,49 @@ The do-while loop statements to call the function and to show the elements of th
 
 */
 
-
 #include <stdio.h>
 
 double getNumber();
 
+
 int main(){
     
-    double elementZero, positiveSum = 0, average;
-    int numOfElements, i = 0, j = 0, positiveCount = 0;
+    int arraySize, i = 0, j = 0, positiveCount = 0;
     
     printf("How many numbers? ");
-    scanf("%d", &numOfElements);
-    
-    double arr[numOfElements];
+    scanf("%d", &arraySize);
     
     printf("Input the array elements\n");
+    
+    double arr[arraySize], sum = 0;
+    
     do {
-
+        
         printf("[%d] = ", i);
         arr[i] = getNumber();
         
         if (arr[i] > 0){
-       
-            positiveSum += arr[i];
+            
             positiveCount++;
-        }
-        
-        i++;
-
-    } while (i < numOfElements);
+            sum += arr[i];
     
-  
-    printf("\nArray elements: \n");
+    }
+    
+    i++;
+
+    } while (i < arraySize);
+    
+        printf("\nArray elements: \n");
     
     do {
+        
         printf("[%d] = %.2lf\n", j, arr[j]);
         j++;
-        
-    } while (j < numOfElements);
     
-    average = positiveSum/positiveCount;
+    } while (j < arraySize);
     
-    printf("\nAverage of %d positive numbers is %.2lf", positiveCount, average);
- 
+    printf("\nAverage of %d positive numbers is %.2lf", positiveCount,  sum / (double) positiveCount);
+    
 }
 
 double getNumber(){
