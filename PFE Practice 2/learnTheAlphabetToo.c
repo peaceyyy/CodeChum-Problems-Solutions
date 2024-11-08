@@ -28,49 +28,40 @@ Enter the 1st character of the alphabet: A
 Use nested while loops and if statements. (Hint: Use continue and break statements.)
 
 */
-
 #include <stdio.h>
-#include <ctype.h>
 
 int main(){
     
-    char character, smallLetter = 'a', capitalLetter = 'A';
-    int count = 0;
-   
+    char character;
+    int i = 0;
+    
     while (1){
         
         printf("Enter the 1st character of the alphabet: ");
         scanf(" %c", &character);
         
-        if (character != 'a' && character != 'A') continue;
+        if (character != 'A' && character != 'a') continue;;
         else break;
     }
-        
-    printf("\nAlphabet:\n");
     
-    int rows = 1;
+    printf("\nAlphabet: \n");
     
-    while(rows <= 5){
+
+        while (i < 5){
             
-        int columns = 0;
-    
-        while (columns < 5){
+            int j = 0;
             
-            if(count > 24) break;
-        
-            printf("%c ", character);
-            character++;
-            columns++;
-            count++;
-            
+            while (j < 5){
+                
+                printf("%c ", character);
+                character++;
+                j++;
             }
             
-        printf("\n");
+            printf("\n");
+            
+            i++;
+        }
         
-        rows++;
-    
-    }
-    
-    printf("    %c", character);
-
+        printf("    %c", character++);
 }
