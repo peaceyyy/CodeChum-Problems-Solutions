@@ -12,48 +12,55 @@ If the number inputted is outside the range, the output should display "Number m
 Use nested do-while loop to display the numbers.
 
 */
-
 #include <stdio.h>
 
 void countingFunction();
 
+
 int main(){
-    
+
     countingFunction();
     
+    return 0;
 }
 
 void countingFunction(){
     
-    int num, count = 1;
+    int n, count = 1;
     
     do {
         
         printf("Count from 1 up to ? ");
-        scanf("%d", &num);
+        scanf("%d", &n);
         
-        if (num <= 0 || num > 100) printf("Number must be between 1-100!\n");
+        if (n <= 0 || n > 100) printf("Number must be between 1-100!\n");
         
-    } while (num <= 0 || num > 100);
+    } while (n <= 0 || n > 100);
+     
+    int i = 0;
     
     printf("\nCounting...\n");
     
     
     do {
-    
-        int countCheck = count + 10;
         
-            do {
-                
-                if (count > num) break;
-                printf("%d\t", count);
-                count++;
-                
-            } while (count < countCheck);
+        int j = 0;
         
-        printf("\n");
-         
-        } while (count <= num);
-    
+        do {
+        
+        printf("%d\t", count);
+        
+        if (count % 10 == 0) printf("\n");
+        
+        count++;
+        j++;
+        
             
-    }
+        } while (j < n);
+        
+    i++;
+    
+    } while (count <= n);
+    
+    
+}
