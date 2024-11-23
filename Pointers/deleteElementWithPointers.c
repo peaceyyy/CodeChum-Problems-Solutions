@@ -12,6 +12,7 @@ The function should remove the element from the original array and adjust the si
 Use the created function and print the elements of the modified array afterwards.
 
 */
+
 #include <stdio.h>
 
 void deleteElement(int*, int*, int*);
@@ -43,7 +44,8 @@ int main() {
 }
 
 void deleteElement(int* arr, int* size, int* deleteVal) {
-    int index = -1;
+    
+    int index;
 
 
     for (int i = 0; i < *size; i++) {
@@ -53,11 +55,9 @@ void deleteElement(int* arr, int* size, int* deleteVal) {
         }
     }
 
-
-    if (index != -1) {
         for (int j = index; j < *size - 1; j++) {
             arr[j] = arr[j + 1];
-        }
-        (*size)--;
     }
+    
+    (*size)--;
 }
