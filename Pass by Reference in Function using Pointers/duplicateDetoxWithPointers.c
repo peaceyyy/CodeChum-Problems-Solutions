@@ -28,28 +28,26 @@ void printArray(int arr[], int size)
 
 void removeDuplicates(int *arr, int *size)
 {
-    // Assuming MAX_ARR_SIZE is defined appropriately
+   
     int hashMap[MAX_ARR_SIZE] = {0};
-    int newIndex = 0; // Will keep track of where to place unique elements
+    int newIndex = 0; 
 
-    // First pass: Mark all numbers we've seen in the hashMap
+   
     for (int i = 0; i < *size; i++)
     {
         hashMap[arr[i]]++;
     }
 
-    // Second pass: Keep only the first occurrence of each number
     for (int i = 0; i < *size; i++)
     {
         if (hashMap[arr[i]] >= 1)
-        {                           // If we find a number
-            arr[newIndex] = arr[i]; // Move it to the next available position
-            hashMap[arr[i]] = 0;    // Mark it as processed
-            newIndex++;             // Move to next position for unique elements
+        {                        
+            arr[newIndex] = arr[I];
+            hashMap[arr[i]] = 0;    
+            newIndex++;            
         }
     }
 
-    // Update the size to reflect the number of unique elements
     *size = newIndex;
 }
 int main()
