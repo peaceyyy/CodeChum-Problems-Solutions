@@ -1,3 +1,18 @@
+/*
+Given:
+
+In retrieveV2, retrieve all the values where their studentId if the value is an even number. Add all found values in a dynamic array. Use malloc() or realloc() if necessary.
+
+Output:
+102     Alice   English
+104       Eva   History
+106    Sophia   Physics
+108      Emma   Biology
+
+Taken from https://near-mandrill-5da.notion.site/Programming-2-b79b46fc68bc4225b5d9915a38f0b151?p=0dac6188ef394be48c70fc6899f5cc99&pm=s
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
